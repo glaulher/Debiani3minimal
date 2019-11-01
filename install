@@ -27,4 +27,4 @@ sudo apt update
 sudo apt install codium -y
 
 #wicd para o wifi#
-sudo apt install wicd -y
+sudo apt install wicd-curses -y
