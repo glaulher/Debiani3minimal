@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+#Create swapfile
+sleep 2
+
+swapoff -a
+dd if=/dev/zero of=/swapfile bs=1024 count=2M
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+printf "# Swap file created on DATE \n/swapfile       none    swap    sw      0       0" >> /etc/fstab
+ls /
+
 # install 
 apt --no-install-recommends install xserver-xorg-video-intel xorg -y 
 apt install sudo xinit i3 geany xdotool yad terminator jq xbacklight rofi -y 
