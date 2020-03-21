@@ -12,7 +12,7 @@ printf "# Swap file created on DATE \n/swapfile       none    swap    sw      0 
 ls /
 
 # install 
-apt --no-install-recommends install xserver-xorg-video-intel xorg -y 
+apt install xserver-xorg-core xserver-xorg-video-intel xserver-xorg-input-evdev xserver-xorg-input-kbd xserver-xorg-input-mouse -y 
 apt install sudo xinit i3 geany xdotool yad terminator jq xbacklight rofi -y 
 apt install cmus ranger adapta-gtk-theme papirus-icon-theme breeze-cursor-theme -y
 apt install libnotify-bin pulseaudio pavulcontrol ttf-mscorefonts-installer libnotify-bin -y 
