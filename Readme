@@ -6,3 +6,9 @@ wget -qO- encurtador.com.br/aKV56 | bash
 
 
 wget -qO- www.abreai.com/i3 | bash
+
+para o b490 //driver rede
+
+apt install dkms linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms
+modprobe -r b44 b43 b43legacy ssb brcmsmac bcma
+modprobe wl
